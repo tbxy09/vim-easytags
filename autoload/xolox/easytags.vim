@@ -74,7 +74,7 @@ function! xolox#easytags#check_ctags_compatible(name, min_version) " {{{2
   " Make sure the command exits without reporting an error.
   let command = a:name . ' --version'
   let result = xolox#misc#os#exec({'command': command, 'check': 0})
-  echo result
+  " echo result
   if result['exit_code'] != 0
     call xolox#misc#msg#debug("easytags.vim %s: Command '%s' returned nonzero exit code %i!", g:xolox#easytags#version, a:name, result['exit_code'])
   else
